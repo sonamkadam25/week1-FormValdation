@@ -1,0 +1,106 @@
+.user-form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .password-toggle {
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+  /* Style the submit button */
+.user-form button[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    opacity: 0.6; /* Slightly transparent initially */
+  }
+  
+  .user-form button[type="submit"]:hover {
+    opacity: 1; /* Full opacity on hover */
+  }
+  
+  .user-form button[type="submit"]:disabled {
+    background-color: #ddd; /* Grayed out when disabled */
+    cursor: default;
+  }
+  
+  /* Style the select element */
+  .form-group select {
+    appearance: none; /* Remove default select styles */
+    background-image: url("data:image/svg+xml;base64,phN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIHZpZXdCbG9jay0="), linear-gradient(to bottom, #ccc, #ccc);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 30px;
+  }
+  
+  /* Style the dropdown arrow */
+  .form-group select:focus {
+    background-image: url("data:image/svg+xml;base64,phN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2IiBoZWlnaHQ9IjYiIHZpZXdCbG9jay0="), linear-gradient(to bottom, #ddd, #ddd);
+  }
+  
+  .form-group select::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #ccc;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+ 
+   .form-group input:focus,
+.form-group select:focus {
+  border-color: #007bff; /* Blue border on focus */
+}
+
+.form-group input::-webkit-input-placeholder, /* Chrome, Safari, Edge */
+.form-group input:-moz-placeholder, /* Firefox */
+.form-group input::-moz-placeholder-shown { /* Firefox */
+  color: #ccc;
+}
+@media only screen and (max-width: 768px) {
+    .user-form {
+      width: 100%; /* Make form fit smaller screens */
+    }
+  }
+  
